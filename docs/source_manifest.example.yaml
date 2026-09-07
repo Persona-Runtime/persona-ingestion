@@ -1,0 +1,22 @@
+# 원본 파일 1개당 manifest 1개. 실제 manifest는 Git이 아니라 private 경로에 둔다.
+# 이 파일은 필드 설명용 예시이며 합성 값만 담는다.
+
+source_id: sample-series-ep001        # 전역 유일. utterance_id prefix로 쓰인다
+character_id: character_a             # 이 source에서 추출할 대상 persona
+series: sample-series                 # 파일명 추측이 아니라 여기 값이 기준
+episode: "001"                        # 표기 형식은 series별로 고정 (예: S01E01)
+input_type: transcript_txt            # transcript_txt | script_pdf
+language: en
+
+# 권리·보존
+rights_status: private_unverified     # private_unverified | licensed | synthetic
+allowed_scope: private_validation_only
+acquired_at: 2026-08-30
+delete_at: 2027-08-30
+
+# 무결성
+file: raw/sample-series/ep001.txt     # private root 기준 상대 경로
+sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+
+# 파서
+parser_profile: transcript-txt-v1
